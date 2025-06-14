@@ -1,0 +1,15 @@
+<h1>Projects</h1>
+<div class="projects-container">
+  @for (projectItem of projectList; track $index) {
+  <a [routerLink]="'/project-details' + projectItem.id">
+    <div>
+      {{ projectItem.title }}
+      {{ projectItem.description }}
+    </div>
+    <div>
+      <button>EDIT</button>
+      <button>DELETE</button>
+    </div>
+  </a>
+  }
+</div>
